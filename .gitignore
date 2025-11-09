@@ -1,0 +1,32 @@
+.env
+.env.*
+!.env.example
+
+# Secrets and credentials
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# OS and editor noise
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Local Docker data and generated output
+data/
+tmp/
+dist/
+build/
+coverage/
+node_modules/
+venv/
+.venv/
+__pycache__/
+
+# Data exports and operational logs
+# Review before upload: Element Logic CSV/log files may contain confidential manufacturing or warehouse data.
+*.csv
+*.log
