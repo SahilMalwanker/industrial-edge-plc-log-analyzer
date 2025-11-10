@@ -1,0 +1,16 @@
+services:
+  opensearch-dashboards:
+    image: opensearchproject/opensearch-dashboards:2.19.4
+    container_name: opensearch-dashboards
+    ports:
+      - "5601:5601"
+    environment:
+      - OPENSEARCH_HOSTS=http://opensearch:9200
+      - DISABLE_SECURITY=true
+      - DISABLE_SECURITY_DASHBOARDS_PLUGIN=true
+    networks:
+      - element-logic
+
+networks:
+  element-logic:
+    external: true
